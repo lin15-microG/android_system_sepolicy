@@ -773,3 +773,7 @@ neverallow system_server { domain -system_server }:process ptrace;
 # file read access. However, that is now unnecessary (b/34951864)
 # This neverallow can be removed after b/34951864 is fixed.
 neverallow system_server system_server:capability sys_resource;
+
+# dumpsys/pipes in z_iptables executable
+allow system_server z_iptables:fd use;
+allow system_server z_iptables:fifo_file write;
