@@ -3,6 +3,7 @@
 ##
 typeattribute z_iptables coredomain;
 
+allow z_iptables app_data_file:dir getattr;
 allow z_iptables package_service:service_manager find;
 allow z_iptables property_socket:sock_file write;
 allow z_iptables shell_exec:file rx_file_perms;
