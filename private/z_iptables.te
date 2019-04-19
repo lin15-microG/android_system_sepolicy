@@ -9,6 +9,8 @@ allow z_iptables property_socket:sock_file write;
 allow z_iptables shell_exec:file rx_file_perms;
 allow z_iptables self:capability {net_admin net_raw};
 allow z_iptables self:rawip_socket create_socket_perms;
+allow z_iptables self:tcp_socket create_socket_perms;
+allow z_iptables self:udp_socket create_socket_perms;
 allow z_iptables system_data_file:dir rw_dir_perms;
 allow z_iptables system_data_file:file create_file_perms;
 allow z_iptables system_file:file { execute_no_trans lock };
