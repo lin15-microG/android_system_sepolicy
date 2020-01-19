@@ -45,4 +45,7 @@ allow netmonitor proc_misc:file r_file_perms;
 # This will go away in a future Android release
 allow netmonitor proc_tty_drivers:file r_file_perms;
 
+# needed for treble builds
+allow netmonitor vendor_file:file { r_file_perms execute };
+
 r_dir_file(netmonitor, proc_net)
